@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Polly - 3D Game.unity
+- path: Assets/Scenes/Scene 1.unity
   isLoaded: 1
   isActive: 1
