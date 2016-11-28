@@ -14,7 +14,13 @@ public class CharacterCamera : MonoBehaviour {
 			yaw += speedH * Input.GetAxis("Mouse X");
 			pitch -= speedV * Input.GetAxis("Mouse Y");
 
+		if (pitch >= 90)
+			pitch = 90;
+		if (pitch <= -60)
+			pitch = -60;
+		
 			transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
+
 		}
 
 }
