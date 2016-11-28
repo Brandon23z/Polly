@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44756883, g: 0.4975162, b: 0.5754481, a: 1}
+  m_IndirectSpecularColor: {r: 0.44756854, g: 0.49751586, b: 0.5754477, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2305,7 +2305,7 @@ Transform:
   m_GameObject: {fileID: 387355304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 245.27734, y: 148.79688, z: 323.73828}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5924,7 +5924,7 @@ MonoBehaviour:
   speed: 25
   jumpSpeed: 25
   gravity: 70
-  lungeSpeed: 50
+  lungeSpeed: 30
 --- !u!114 &1175192745
 MonoBehaviour:
   m_ObjectHideFlags: 0
