@@ -21,6 +21,7 @@ GameObject:
   - 4: {fileID: 4000011136624562}
   - 33: {fileID: 33000012036213386}
   - 23: {fileID: 23000012578205118}
+  - 64: {fileID: 64000012260220042}
   m_Layer: 0
   m_Name: Mesh1_Group1_Model
   m_TagString: Untagged
@@ -36,6 +37,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012559623974}
+  - 64: {fileID: 64000012206456014}
   m_Layer: 0
   m_Name: modularBuildings_010
   m_TagString: Untagged
@@ -205,3 +207,27 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013765223772}
   m_Mesh: {fileID: 4300000, guid: e82033d334fc0e54d87f2678db79a7a5, type: 3}
+--- !u!64 &64000012206456014
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010964716676}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 0}
+--- !u!64 &64000012260220042
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010370406616}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 1f35782f57da32d4bb3925568fcaa784, type: 3}

@@ -21,6 +21,7 @@ GameObject:
   - 4: {fileID: 4000013235687298}
   - 33: {fileID: 33000010856915810}
   - 23: {fileID: 23000012159433190}
+  - 64: {fileID: 64000012205108366}
   m_Layer: 0
   m_Name: Mesh1_Group2_Group1_Model
   m_TagString: Untagged
@@ -53,6 +54,7 @@ GameObject:
   - 4: {fileID: 4000011073613134}
   - 33: {fileID: 33000010410065644}
   - 23: {fileID: 23000011614350284}
+  - 64: {fileID: 64000013418259852}
   m_Layer: 0
   m_Name: Mesh2_Group3_Group1_Model
   m_TagString: Untagged
@@ -173,3 +175,27 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010265980732}
   m_Mesh: {fileID: 4300000, guid: 5fe455014e86a974586c202e933096ae, type: 3}
+--- !u!64 &64000012205108366
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010265980732}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 5fe455014e86a974586c202e933096ae, type: 3}
+--- !u!64 &64000013418259852
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014052166936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300002, guid: 5fe455014e86a974586c202e933096ae, type: 3}

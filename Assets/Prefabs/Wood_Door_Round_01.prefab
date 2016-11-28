@@ -21,6 +21,7 @@ GameObject:
   - 4: {fileID: 4000013837312602}
   - 33: {fileID: 33000011146922428}
   - 23: {fileID: 23000010439833474}
+  - 64: {fileID: 64000014107099606}
   m_Layer: 0
   m_Name: Mesh1_Wood_Door_Round_Model
   m_TagString: Untagged
@@ -106,4 +107,16 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012843682922}
+  m_Mesh: {fileID: 4300000, guid: 83561f2f57857b1448e769054ae5e53b, type: 3}
+--- !u!64 &64000014107099606
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012843682922}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 83561f2f57857b1448e769054ae5e53b, type: 3}
