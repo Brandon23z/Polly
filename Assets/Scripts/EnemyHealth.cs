@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int startingHealth = 100;      
+    public int startingHealth = 10;      
     public int currentHealth;                 
     public float sinkSpeed = 2.5f;            
     public int scoreValue = 10;          
@@ -12,8 +12,7 @@ public class EnemyHealth : MonoBehaviour
     Animator anim;                            
     ParticleSystem hitParticles;               
     CapsuleCollider capsuleCollider;            
-    bool isDead;                                
-    bool isSinking;                            
+    bool isDead;                              
 
 
     void Awake()
@@ -25,15 +24,6 @@ public class EnemyHealth : MonoBehaviour
         
         currentHealth = startingHealth;
     }
-
-    void Update()
-    {
-        if (isSinking)
-        {
-            transform.Translate(-Vector3.up * sinkSpeed * Time.deltaTime);
-        }
-    }
-
 
     public void TakeDamage(int amount, Vector3 hitPoint)
     {
@@ -65,8 +55,6 @@ public class EnemyHealth : MonoBehaviour
         GetComponent<NavMeshAgent>().enabled = false;
         
         GetComponent<Rigidbody>().isKinematic = true;
-
-        isSinking = true;
         
         Destroy(gameObject, 2f);
     }

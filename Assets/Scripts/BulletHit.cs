@@ -1,11 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BulletHit : MonoBehaviour {
-
-
-	void OnCollisionEnter(Collision collision)
-	{
-		Destroy (this.gameObject);
-	}
+public class BulletHit : MonoBehaviour
+{
+    public float lifetime = 1.0f;
+    void Start()
+    {
+    }
+    void Update()
+    {
+    }
+    void Awake()
+    {
+        Destroy(gameObject, lifetime);
+    }
+    void OnCollisionEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            DestroyObject(other.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }

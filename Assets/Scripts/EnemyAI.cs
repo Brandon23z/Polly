@@ -3,24 +3,35 @@ using System.Collections;
 
 public class EnemyAI : MonoBehaviour
 {
+    public Transform target;
+    public int moveSpeed = 3;
+    public int rotationSpeed = 3;
 
-    Transform tr_Player;
-    float f_RotSpeed = 3.0f, f_MoveSpeed = 3.0f;
+    public Transform myTransform;
 
-    // Use this for initialization
-    void Start()
+
+    public void Awake()
     {
-        tr_Player = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        myTransform = transform;
     }
 
-    // Update is called once per frame
+
+    void Start()
+    {
+        target = GameObject.FindWithTag("Weapon").transform;
+    }
+
+
     void Update()
     {
-        /* Look at Player*/
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(tr_Player.position - transform.position), f_RotSpeed * Time.deltaTime);
+        //rotate to look at the player
+        myTransform.rotation = Quaternion.Slerp(myTransform.rotation,
+        Quaternion.LookRotation(target.position - myTransform.position), rotationSpeed * Time.deltaTime);
 
-        /* Move at Player*/
-        transform.position += transform.forward * f_MoveSpeed * Time.deltaTime;
+
+        //move towards the player
+        myTransform.position += myTransform.forward * moveSpeed * Time.deltaTime;
+
     }
 }
 
