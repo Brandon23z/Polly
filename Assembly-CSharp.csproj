@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\WaveSpawn.cs" />
      <Compile Include="Assets\Scripts\bulletprojectile.cs" />
+     <None Include="Assets\StoneKeep\Readme.txt" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
