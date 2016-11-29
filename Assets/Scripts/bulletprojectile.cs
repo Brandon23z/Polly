@@ -6,6 +6,7 @@ public class bulletprojectile : MonoBehaviour
 
 	public Rigidbody projectile;
 	public Transform Spawnpoint;
+	public AudioClip gunShot;
 	public float bulletSpeed = 70;
 	public int ammoCount = 15;
 	public float bulletDelay = 0.650F;
@@ -29,6 +30,7 @@ public class bulletprojectile : MonoBehaviour
 			if(Input.GetButton ("Fire1") && ammoCount != 0 && canFire == true)
 			{
 				ammoCount--;
+				AudioSource.PlayClipAtPoint (gunShot, Spawnpoint.transform.position);
 				Rigidbody clone;
 				clone = (Rigidbody)Instantiate(projectile, Spawnpoint.position, projectile.rotation);
 				clone.gameObject.AddComponent (typeof(BulletHit));
@@ -36,11 +38,13 @@ public class bulletprojectile : MonoBehaviour
 
 				canFire = false;
 				Invoke ("Fire", bulletDelay/2);
+
 			}
 		}
 		else if (Input.GetButtonDown ("Fire1") && ammoCount != 0 && canFire == true)
 		{
 			ammoCount--;
+			AudioSource.PlayClipAtPoint (gunShot, Spawnpoint.transform.position);
 			Rigidbody clone;
 			clone = (Rigidbody)Instantiate(projectile, Spawnpoint.position, projectile.rotation);
 			clone.gameObject.AddComponent (typeof(BulletHit));
