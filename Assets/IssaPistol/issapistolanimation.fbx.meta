@@ -26,6 +26,7 @@ ModelImporter:
     7400004: Mesh1 Group2 Group1 Model|Mesh1 Group2 Group1 ModelAction
     7400006: Mesh1 Group2 Group1 Model|Mesh2 Group3 Group1 ModelAction
     9500000: //RootNode
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -84,7 +85,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

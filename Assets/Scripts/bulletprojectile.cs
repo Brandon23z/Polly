@@ -19,6 +19,11 @@ public class bulletprojectile : MonoBehaviour
 
 	void Update ()
 	{
+		if (Input.GetKeyDown(KeyCode.C))
+		{
+			setRoF ();
+		}
+		
 		if(isFullyAutomatic)
 		{
 			if(Input.GetButton ("Fire1") && ammoCount != 0 && canFire == true)
@@ -28,8 +33,9 @@ public class bulletprojectile : MonoBehaviour
 				clone = (Rigidbody)Instantiate(projectile, Spawnpoint.position, projectile.rotation);
 				clone.gameObject.AddComponent (typeof(BulletHit));
 				clone.velocity = Spawnpoint.TransformDirection (Vector3.forward*bulletSpeed);
+
 				canFire = false;
-				Invoke ("Fire", bulletDelay);
+				Invoke ("Fire", bulletDelay/2);
 			}
 		}
 		else if (Input.GetButtonDown ("Fire1") && ammoCount != 0 && canFire == true)
@@ -43,6 +49,11 @@ public class bulletprojectile : MonoBehaviour
 			Invoke ("Fire", bulletDelay);
 		}
 
+	}
+
+	void setRoF()
+	{
+		isFullyAutomatic = !isFullyAutomatic;
 	}
 
 	void Fire ()

@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44756854, g: 0.49751586, b: 0.5754477, a: 1}
+  m_IndirectSpecularColor: {r: 0.44756883, g: 0.4975162, b: 0.5754481, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1148,8 +1148,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2043309768}
-  - 95: {fileID: 269979997}
   - 114: {fileID: 269979998}
+  - 111: {fileID: 269979997}
   m_Layer: 0
   m_Name: issapistolanimation
   m_TagString: Untagged
@@ -1157,24 +1157,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &269979997
-Animator:
-  serializedVersion: 3
+--- !u!111 &269979997
+Animation:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 4b31206e71ccd6c40bfe3b63562d0ad9,
-    type: 3}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 269979996}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 4b31206e71ccd6c40bfe3b63562d0ad9, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400004, guid: 4b31206e71ccd6c40bfe3b63562d0ad9, type: 3}
+  - {fileID: 7400006, guid: 4b31206e71ccd6c40bfe3b63562d0ad9, type: 3}
+  - {fileID: 7400000, guid: 4b31206e71ccd6c40bfe3b63562d0ad9, type: 3}
+  - {fileID: 7400002, guid: 4b31206e71ccd6c40bfe3b63562d0ad9, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &269979998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1189,7 +1189,9 @@ MonoBehaviour:
   projectile: {fileID: 387355305}
   Spawnpoint: {fileID: 557227954}
   bulletSpeed: 400
-  ammoCount: 15
+  ammoCount: 1500
+  bulletDelay: 0.65
+  isFullyAutomatic: 0
 --- !u!1001 &278520200
 Prefab:
   m_ObjectHideFlags: 0
