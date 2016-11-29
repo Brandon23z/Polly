@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44756883, g: 0.4975162, b: 0.5754481, a: 1}
+  m_IndirectSpecularColor: {r: 0.44756854, g: 0.49751586, b: 0.5754477, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -201,7 +201,11 @@ Prefab:
       objectReference: {fileID: 9100000, guid: 7a0bb7418764e3c4a83dcbff946b1c49, type: 2}
     - target: {fileID: 100002, guid: 0e54177e3a7761b479772655aa359e8b, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 0e54177e3a7761b479772655aa359e8b, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e54177e3a7761b479772655aa359e8b, type: 3}
@@ -4139,6 +4143,36 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: 0e54177e3a7761b479772655aa359e8b, type: 3}
   m_PrefabInternal: {fileID: 29844184}
+--- !u!114 &807699945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 807699944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3bf18ff9c0775e448ec468b5c1e426e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 10
+  currentHealth: 0
+  sinkSpeed: 2.5
+  scoreValue: 10
+--- !u!114 &807699946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 807699944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7977e850bdd53044cb5bd96d428f6dc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1175192742}
+  moveSpeed: 3
+  rotationSpeed: 3
+  myTransform: {fileID: 1175192742}
 --- !u!1 &809732278
 GameObject:
   m_ObjectHideFlags: 0
@@ -5891,7 +5925,7 @@ GameObject:
   - 114: {fileID: 1175192745}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
