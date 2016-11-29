@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\CharcaterMove.cs" />
      <Compile Include="Assets\Scripts\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\EnemyHealth.cs" />
+     <Compile Include="Assets\Scripts\UIAmmo.cs" />
      <Compile Include="Assets\Scripts\WaveSpawn.cs" />
      <Compile Include="Assets\Scripts\bulletprojectile.cs" />
      <None Include="Assets\StoneKeep\Readme.txt" />
