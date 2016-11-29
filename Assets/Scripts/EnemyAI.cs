@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyAI : MonoBehaviour
 {
 
     Transform tr_Player;
@@ -10,7 +10,6 @@ public class EnemyMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
         tr_Player = GameObject.FindGameObjectWithTag("MainCamera").transform;
     }
 
@@ -24,3 +23,4 @@ public class EnemyMovement : MonoBehaviour
         transform.position += transform.forward * f_MoveSpeed * Time.deltaTime;
     }
 }
+
