@@ -45,6 +45,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\First Person Drifter Controller\Scripts\FirstPersonDrifter.cs" />
+     <Compile Include="Assets\First Person Drifter Controller\Scripts\LockMouse.cs" />
+     <Compile Include="Assets\First Person Drifter Controller\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\First Person Drifter Controller\Scripts\Optional\CameraFadeOnStart.cs" />
+     <Compile Include="Assets\First Person Drifter Controller\Scripts\Optional\CameraZoom.cs" />
+     <Compile Include="Assets\First Person Drifter Controller\Scripts\Optional\CheckIfBelowLevel.cs" />
+     <Compile Include="Assets\First Person Drifter Controller\Scripts\Optional\HeadBob.cs" />
+     <Compile Include="Assets\First Person Drifter Controller\Scripts\Optional\PauseMenu.cs" />
+     <Compile Include="Assets\First Person Drifter Controller\Scripts\Utils\CameraFade.cs" />
      <Compile Include="Assets\Scripts\BulletHit.cs" />
      <Compile Include="Assets\Scripts\CharacterCamera.cs" />
      <Compile Include="Assets\Scripts\CharcaterMove.cs" />
@@ -54,6 +63,7 @@
      <Compile Include="Assets\Scripts\WaveSpawn.cs" />
      <Compile Include="Assets\Scripts\bulletprojectile.cs" />
      <None Include="Assets\StoneKeep\Readme.txt" />
+     <None Include="Assets\First Person Drifter Controller\info.txt" />
      <None Include="Assets\Sounds\Glock Shot\Glock Shot info.txt" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Sounds\SoundTrack\Soundtrack info.txt" />
