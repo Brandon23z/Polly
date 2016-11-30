@@ -4,6 +4,7 @@ using System.Collections;
 
 public class HealthBar : MonoBehaviour {
 
+	public GameObject bar;
 	private Image ima;
 	public Sprite someOtherSprite;
 	public int health;
@@ -23,24 +24,10 @@ public class HealthBar : MonoBehaviour {
 	{
 		if (Input.GetKeyDown (KeyCode.H))
 		{
-			health--;
-			LoadSprite ();
-		}
-		if (Input.GetKeyDown (KeyCode.J))
-		{
-			health = maxHealth;
-			LoadSprite ();
-		}
+			Destroy (this.gameObject);
 
-	}
-
-	public void LoadSprite ()
-	{
-		if (health == 9) 
-		{
-			someOtherSprite = Resources.Load<Sprite> ("9Health");
-
-			ima.sprite = someOtherSprite;
 		}
 	}
+
+
 }
