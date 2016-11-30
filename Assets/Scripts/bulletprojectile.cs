@@ -8,7 +8,8 @@ public class bulletprojectile : MonoBehaviour
 	public Transform Spawnpoint;
 	public AudioClip gunShot;
 	public float bulletSpeed = 70;
-	public int ammoCount = 15;
+	public int ammoCount;
+	public int maxAmmo = 15;
 	public float bulletDelay = 0.650F;
 	public bool isFullyAutomatic = false;
 	private bool canFire;
@@ -16,6 +17,7 @@ public class bulletprojectile : MonoBehaviour
 	void Start()
 	{
 		canFire = true;
+		ammoCount = 15;
 	}
 
 	void Update ()
@@ -24,7 +26,12 @@ public class bulletprojectile : MonoBehaviour
 		{
 			setRoF ();
 		}
-		
+
+		if (Input.GetKeyDown (KeyCode.R) && ammoCount < 15) 
+		{
+			ammoCount = maxAmmo;
+		}
+
 		if(isFullyAutomatic)
 		{
 			if(Input.GetButton ("Fire1") && ammoCount != 0 && canFire == true)

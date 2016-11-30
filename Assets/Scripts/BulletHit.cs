@@ -22,10 +22,13 @@ public class BulletHit : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Enemy")
-        {
-            DestroyObject(other.gameObject);
-            Destroy(gameObject);
-        }
+		if (other.gameObject.tag == "Enemy")
+		{
+			DestroyObject (other.gameObject);
+		
+		}
+	
+			Destroy (gameObject);
+		
     }
 }
