@@ -23,6 +23,11 @@ public class LockMouse : MonoBehaviour
         {
         	LockCursor(!Screen.lockCursor);
         }
+		
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			Application.Quit();
+		}
     }
     
     public void LockCursor(bool lockCursor)
