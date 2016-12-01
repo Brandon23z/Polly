@@ -18,8 +18,8 @@ public class LockMouse : MonoBehaviour
     		LockCursor(true);
     	}
     
-    	// unlock when escape is hit
-        if  ( Input.GetKeyDown(KeyCode.Escape) )
+    	// unlock when P is hit
+        if  ( Input.GetKeyDown(KeyCode.P) )
         {
         	LockCursor(!Screen.lockCursor);
         }
