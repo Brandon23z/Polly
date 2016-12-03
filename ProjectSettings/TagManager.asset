@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Interact
   - Pistol
+  - Blood
+  - Terrain
   layers:
   - Default
   - TransparentFX
