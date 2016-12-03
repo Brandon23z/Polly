@@ -33,16 +33,20 @@ public class HealthBar : MonoBehaviour {
 	
 	public float currentHealth = 100;
 	private float maxHealth = 100;
-	
+	public float currWidth = 300;
+	public float maxWidth = 300;
+	public float currHeight;
+
 	private void Start()
 	{
 		UpdateHealthBar();
+		currHeight = 25;
 	}
 	
 	private void UpdateHealthBar()
 	{
 		float ratio = currentHealth/maxHealth;
-		CurrentHealthBar.rectTransform.localScale = new Vector3(ratio,1,1);
+		CurrentHealthBar.rectTransform.sizeDelta = new Vector2((currWidth - (maxWidth/10)) ,currHeight);
 	}
 	
 	private void TakeDamage(float damage)

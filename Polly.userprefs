@@ -7,7 +7,8 @@
       <File FileName="Assets\Scripts\bulletprojectile.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\UIAmmo.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\BulletHit.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\HealthBar.cs" Line="27" Column="33" />
+      <File FileName="Assets\Scripts\HealthBar.cs" Line="39" Column="2" />
+      <File FileName="Assets\Scripts\EnemyDamage.cs" Line="17" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
