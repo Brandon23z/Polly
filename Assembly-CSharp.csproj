@@ -54,6 +54,7 @@
      <Compile Include="Assets\First Person Drifter Controller\Scripts\Optional\HeadBob.cs" />
      <Compile Include="Assets\First Person Drifter Controller\Scripts\Optional\PauseMenu.cs" />
      <Compile Include="Assets\First Person Drifter Controller\Scripts\Utils\CameraFade.cs" />
+     <Compile Include="Assets\QuitGame.cs" />
      <Compile Include="Assets\Scripts\BulletHit.cs" />
      <Compile Include="Assets\Scripts\CharacterCamera.cs" />
      <Compile Include="Assets\Scripts\CharcaterMove.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\Scripts\EnemyDamage.cs" />
      <Compile Include="Assets\Scripts\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
+     <Compile Include="Assets\Scripts\SceneLoad.cs" />
      <Compile Include="Assets\Scripts\UIAmmo.cs" />
      <Compile Include="Assets\Scripts\WaveSpawn.cs" />
      <Compile Include="Assets\Scripts\bulletprojectile.cs" />
