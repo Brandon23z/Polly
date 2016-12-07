@@ -8,6 +8,8 @@ public class bulletprojectile : MonoBehaviour
 	public Canvas GameCanvas;
 	public Canvas PauseCanvas;
 	public Rigidbody projectile;
+	public GameObject muzzleFlash;
+	public Transform muzzleSpawn;
 	public Transform Spawnpoint;
 	public AudioClip gunShot;
 	public float bulletSpeed = 70;
@@ -48,10 +50,12 @@ public class bulletprojectile : MonoBehaviour
 			{
 				ammoCount--;
 				AudioSource.PlayClipAtPoint (gunShot, Spawnpoint.transform.position);
+				Flash ();
 				Rigidbody clone;
 				clone = (Rigidbody)Instantiate(projectile, Spawnpoint.position, projectile.rotation);
 				clone.gameObject.AddComponent (typeof(BulletHit));
 				clone.velocity = Spawnpoint.TransformDirection (Vector3.forward*bulletSpeed);
+
 
 				canFire = false;
 				Invoke ("Fire", bulletDelay/2);
@@ -62,6 +66,7 @@ public class bulletprojectile : MonoBehaviour
 		{
 			ammoCount--;
 			AudioSource.PlayClipAtPoint (gunShot, Spawnpoint.transform.position);
+			Flash ();
 			Rigidbody clone;
 			clone = (Rigidbody)Instantiate(projectile, Spawnpoint.position, projectile.rotation);
 			clone.gameObject.AddComponent (typeof(BulletHit));
@@ -70,6 +75,13 @@ public class bulletprojectile : MonoBehaviour
 			Invoke ("Fire", bulletDelay);
 		}
 
+	}
+
+	void Flash()
+	{
+		GameObject muzzleClone;
+		muzzleClone = (GameObject)Instantiate (muzzleFlash, muzzleSpawn.position, muzzleSpawn.rotation);
+		Destroy (muzzleClone, .05f);
 	}
 
 	void setRoF()

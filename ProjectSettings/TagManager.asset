@@ -10,6 +10,7 @@ TagManager:
   - Pistol
   - Blood
   - Terrain
+  - Ammo
   layers:
   - Default
   - TransparentFX
