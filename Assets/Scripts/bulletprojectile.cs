@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class bulletprojectile : MonoBehaviour
 {
-
+	
+	public Canvas GameCanvas;
+	public Canvas PauseCanvas;
 	public Rigidbody projectile;
 	public Transform Spawnpoint;
 	public AudioClip gunShot;
@@ -24,7 +27,10 @@ public class bulletprojectile : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
-			Application.Quit();
+			GameCanvas.GetComponent<Canvas> ().enabled = false;
+			PauseCanvas.GetComponent<Canvas> ().enabled = true;
+
+
 		}
 		if (Input.GetKeyDown(KeyCode.C))
 		{

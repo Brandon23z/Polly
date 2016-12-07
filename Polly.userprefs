@@ -1,17 +1,20 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\QuitGame.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\bulletprojectile.cs">
     <Files>
       <File FileName="Assets\Scripts\CharcaterMove.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CharacterCamera.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\bulletprojectile.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\bulletprojectile.cs" Line="7" Column="2" />
       <File FileName="Assets\Scripts\UIAmmo.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\BulletHit.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\HealthBar.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\EnemyDamage.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\SceneLoad.cs" Line="1" Column="1" />
-      <File FileName="Assets\First Person Drifter Controller\Scripts\Optional\PauseMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\First Person Drifter Controller\Scripts\Optional\PauseMenu.cs" Line="96" Column="32" />
       <File FileName="Assets\QuitGame.cs" Line="8" Column="20" />
+      <File FileName="Assets\Returntogame.cs" Line="9" Column="3" />
+      <File FileName="Assets\First Person Drifter Controller\Scripts\LockMouse.cs" Line="29" Column="6" />
+      <File FileName="Assets\First Person Drifter Controller\Scripts\MouseLook.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -55,6 +55,7 @@
      <Compile Include="Assets\First Person Drifter Controller\Scripts\Optional\PauseMenu.cs" />
      <Compile Include="Assets\First Person Drifter Controller\Scripts\Utils\CameraFade.cs" />
      <Compile Include="Assets\QuitGame.cs" />
+     <Compile Include="Assets\Returntogame.cs" />
      <Compile Include="Assets\Scripts\BulletHit.cs" />
      <Compile Include="Assets\Scripts\CharacterCamera.cs" />
      <Compile Include="Assets\Scripts\CharcaterMove.cs" />
