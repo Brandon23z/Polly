@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44756883, g: 0.4975162, b: 0.5754481, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -9671,7 +9671,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a5d7f2978c22844ea30115272f6633f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameCanvas: {fileID: 0}
+  PauseCanvas: {fileID: 0}
   projectile: {fileID: 387355305}
+  muzzleFlash: {fileID: 0}
+  muzzleSpawn: {fileID: 0}
   Spawnpoint: {fileID: 1088340189}
   gunShot: {fileID: 8300000, guid: cbcc4cb875c6b8340973da36c5109178, type: 3}
   bulletSpeed: 400
@@ -12413,8 +12417,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Creators: \nAristotelis Papaioannou\t\tLuke \"Pancho\" Pacheco\nBrandon
-    Manni\t\t\t\t\tMohamed Nasrallah\n"
+  m_Text: "Creators: \nAristotelis Papaioannou\t\tLuke Pacheco\nBrandon Manni\t\t\t\t\tMohamed
+    Nasrallah\n"
 --- !u!222 &1656942731
 CanvasRenderer:
   m_ObjectHideFlags: 0
