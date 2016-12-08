@@ -3,7 +3,7 @@ using System.Collections;
 
 public class WaveSpawn : MonoBehaviour
 {
-    public GameObject Enemy = null;
+    public GameObject[] Enemy = null;
 
     public int hazardCount = 3;
     public float spawnWait = 0.5f;
@@ -25,7 +25,7 @@ public class WaveSpawn : MonoBehaviour
             {
                 int spawnPointIndex = Random.Range(0, spawnPoints.Length);
 
-                Instantiate(Enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+				Instantiate(Enemy[Random.Range(1,2)], spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
 
                 yield return new WaitForSeconds(spawnWait);
             }
