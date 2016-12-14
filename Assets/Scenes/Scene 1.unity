@@ -16350,7 +16350,7 @@ GameObject:
   - 114: {fileID: 2113628326}
   m_Layer: 0
   m_Name: WaveSpawner
-  m_TagString: Untagged
+  m_TagString: WaveSpawnerScript
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16373,9 +16373,18 @@ MonoBehaviour:
   spawnWait: 0.5
   startWait: 1
   waveWait: 4
+  maxWaves: 10
+  enemyCount: 0
+  enemiesThisWave: 0
+  enemiesSpawned: 0
+  shouldSpawn: 0
+  waveNumb: 0
+  cooldown: 15
   spawnPoints:
   - {fileID: 970090056}
   - {fileID: 899586025}
+  WaveNumberText: {fileID: 170876349}
+  GonsLeftText: {fileID: 1698182122}
 --- !u!4 &2113628327
 Transform:
   m_ObjectHideFlags: 0

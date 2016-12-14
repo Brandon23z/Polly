@@ -6,11 +6,13 @@ public class BulletHit : MonoBehaviour
 	public Transform bloodParticle;
 	public GameObject ammoModel;
 	public float randomVal;
+	public WaveSpawn WaveSpawner;
+
 
 	void Start()
 	{
 		ammoModel = GameObject.FindGameObjectWithTag ("Ammo");
-
+		WaveSpawner = GameObject.FindGameObjectWithTag ("WaveSpawnerScript").GetComponent<WaveSpawn>();
 	}
 
     void OnCollisionEnter(Collision other)
@@ -33,7 +35,7 @@ public class BulletHit : MonoBehaviour
 			{
 				Instantiate(ammoModel, pos, ammoModel.transform.rotation);
 			}
-
+			WaveSpawner.enemyCount--;
 			DestroyObject (other.gameObject);
 		}
 

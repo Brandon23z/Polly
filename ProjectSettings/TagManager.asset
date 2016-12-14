@@ -11,6 +11,7 @@ TagManager:
   - Blood
   - Terrain
   - Ammo
+  - WaveSpawnerScript
   layers:
   - Default
   - TransparentFX

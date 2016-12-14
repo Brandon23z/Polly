@@ -6,13 +6,13 @@
       <File FileName="Assets\Scripts\CharacterCamera.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\bulletprojectile.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\UIAmmo.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\BulletHit.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\BulletHit.cs" Line="15" Column="52" />
       <File FileName="Assets\Scripts\HealthBar.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\EnemyDamage.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\SceneLoad.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\DestroyAfterTime.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\AmmoPickup.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\WaveSpawn.cs" Line="32" Column="55" />
+      <File FileName="Assets\Scripts\WaveSpawn.cs" Line="79" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
