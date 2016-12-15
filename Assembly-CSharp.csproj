@@ -70,7 +70,6 @@
      <Compile Include="Assets\Scripts\UIAmmo.cs" />
      <Compile Include="Assets\Scripts\WaveSpawn.cs" />
      <Compile Include="Assets\Scripts\bulletprojectile.cs" />
-     <None Include="Assets\StoneKeep\Readme.txt" />
      <None Include="Assets\First Person Drifter Controller\info.txt" />
      <None Include="Assets\Sounds\Glock Shot\Glock Shot info.txt" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
