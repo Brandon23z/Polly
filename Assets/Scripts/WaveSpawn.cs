@@ -76,22 +76,25 @@ public class WaveSpawn : MonoBehaviour
 		yield return new WaitForSeconds(startWait);
 		while (shouldSpawn == true)
 		{
-			if (enemiesSpawned >= enemiesThisWave)
+		
+			for (int i = 0; i < hazardCount; i++) 
 			{
-				shouldSpawn = false;
-			} 
-			else 
-			{
-				for (int i = 0; i < hazardCount; i++) 
-				{
-					int spawnPointIndex = Random.Range (0, spawnPoints.Length);
+				int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 
+				if (enemiesSpawned < enemiesThisWave)
+				{
 					Instantiate (Enemy [Random.Range (1, 2)], spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
 					enemiesSpawned++;
-					yield return new WaitForSeconds (spawnWait);
+				} 
+				else 
+				{
+					shouldSpawn = false;
 				}
-				yield return new WaitForSeconds (waveWait);
+
+				yield return new WaitForSeconds (spawnWait);
 			}
+			yield return new WaitForSeconds (waveWait);
+
 		}
 
 		waveNumb++; //Delete lter
