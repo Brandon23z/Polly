@@ -22,33 +22,11 @@ public class WaveSpawn : MonoBehaviour
 	public GameObject GonsLeftText;
 	private Text WNT; //Wave Number Text
 	private Text GLT; //Gons Left Text
-
-	/*
-    void Start()
-    {
-        StartCoroutine(SpawnWaves());
-    }
-
-    IEnumerator SpawnWaves()
-    {
-        yield return new WaitForSeconds(startWait);
-        while (true)
-        {
-            for (int i = 0; i < hazardCount; i++)
-            {
-                int spawnPointIndex = Random.Range(0, spawnPoints.Length);
-
-				Instantiate(Enemy[Random.Range(1,2)], spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
-
-                yield return new WaitForSeconds(spawnWait);
-            }
-            yield return new WaitForSeconds(waveWait);
-        }
-    }*/
-
+	public bool PrepareWaveRunning;
 
 	void Start()
 	{
+		PrepareWaveRunning = false;
 		waveNumb = 0;
 		shouldSpawn = true;
 		WNT = WaveNumberText.GetComponent<Text> ();
@@ -65,11 +43,15 @@ public class WaveSpawn : MonoBehaviour
 			
 		WNT.text = "Wave " + waveNumb + "/" + maxWaves;
 		GLT.text = "Gons Left: " + enemyCount;
+
+		if (PrepareWaveRunning == true) 
+		{
+			PrepareNextWave ();
+		}
 	}
 
 	IEnumerator SpawnWaves()
 	{
-		
 		CalculateEnemies ();
 		enemiesThisWave = enemyCount;
 
@@ -80,10 +62,10 @@ public class WaveSpawn : MonoBehaviour
 			for (int i = 0; i < hazardCount; i++) 
 			{
 				int spawnPointIndex = Random.Range (0, spawnPoints.Length);
-
+				int enemyIndex = Random.Range (0, Enemy.Length); 
 				if (enemiesSpawned < enemiesThisWave)
 				{
-					Instantiate (Enemy [Random.Range (1, 2)], spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
+					Instantiate (Enemy [enemyIndex], spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
 					enemiesSpawned++;
 				} 
 				else 
@@ -97,7 +79,9 @@ public class WaveSpawn : MonoBehaviour
 
 		}
 
-		waveNumb++; //Delete lter
+		PrepareWaveRunning = true;
+		StopCoroutine (SpawnWaves()); 
+		
 
 
 	}
@@ -117,8 +101,19 @@ public class WaveSpawn : MonoBehaviour
 
 	void CalculateEnemies()
 	{
-		enemyCount = (20 + (10 * waveNumb)) + Random.Range (-9, 9);
+		enemyCount = (20 + (10 * waveNumb)) + Random.Range (-9, 9); //Change first ten back to twenty
+	}
 
+	void PrepareNextWave()
+	{
+		if (enemyCount <= 0) 
+		{
+			shouldSpawn = true;
+			waveNumb++;
+			enemiesSpawned = 0;
+			PrepareWaveRunning = false;
+			StartCoroutine (SpawnWaves ());
+		}
 	}
 
 }
