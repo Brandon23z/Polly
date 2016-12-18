@@ -20,11 +20,11 @@ public class BulletHit : MonoBehaviour
 		if (other.gameObject.tag == "Enemy")
 		{
 			ContactPoint contact = other.contacts[0];
-			Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
 			Vector3 pos = contact.point;
 
 			for(int i=0; i<20; i++)
 			{
+				Quaternion rot = Random.rotation;
 				Instantiate(bloodParticle, pos, rot);
 			}
 

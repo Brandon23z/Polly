@@ -12,6 +12,7 @@ TagManager:
   - Terrain
   - Ammo
   - WaveSpawnerScript
+  - CurrentHealth
   layers:
   - Default
   - TransparentFX

@@ -42,8 +42,8 @@ public class HealthBar : MonoBehaviour {
 		UpdateHealthBar();
 		currHeight = 25;
 	}
-	
-	private void UpdateHealthBar()
+
+	public void UpdateHealthBar()
 	{
 		float ratio = currentHealth/maxHealth;
 		CurrentHealthBar.rectTransform.sizeDelta = new Vector2((currWidth - (maxWidth/10)) ,currHeight);
