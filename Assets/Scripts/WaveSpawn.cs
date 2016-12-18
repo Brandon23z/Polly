@@ -17,12 +17,19 @@ public class WaveSpawn : MonoBehaviour
 	public bool shouldSpawn;
 	public int waveNumb; //which wave are they on
 	public float cooldown;	//cooldown before the enemies start coming
+	public int waveCoolDown;
+	private int waveCoolDownTimer;
     public Transform[] spawnPoints;
 	public GameObject WaveNumberText;
 	public GameObject GonsLeftText;
+	public GameObject WaveCompletedText;
+	public GameObject WaveCoolDownText;
 	private Text WNT; //Wave Number Text
 	private Text GLT; //Gons Left Text
+	private Text WCT; //Wave Completed Text
+	private Text waveCoolText;
 	public bool PrepareWaveRunning;
+	public bool startNextRunning;
 
 	void Start()
 	{
@@ -31,6 +38,8 @@ public class WaveSpawn : MonoBehaviour
 		shouldSpawn = true;
 		WNT = WaveNumberText.GetComponent<Text> ();
 		GLT = GonsLeftText.GetComponent<Text> ();
+		WCT = WaveCompletedText.GetComponent<Text> ();
+		waveCoolText = WaveCoolDownText.GetComponent<Text> ();
 
 	}
 
@@ -80,6 +89,8 @@ public class WaveSpawn : MonoBehaviour
 		}
 
 		PrepareWaveRunning = true;
+		startNextRunning = false;
+		waveCoolDownTimer = waveCoolDown;
 		StopCoroutine (SpawnWaves()); 
 		
 
@@ -90,10 +101,11 @@ public class WaveSpawn : MonoBehaviour
 	{
 		
 		cooldown -= Time.deltaTime;
-
+		WCT.text = "Game Starting in " + Mathf.Floor (cooldown) + " seconds";
 		if(cooldown < 0 && waveNumb == 0) 
 		{
 			waveNumb++;
+			WCT.text = "";
 			StartCoroutine(SpawnWaves());
 		}
 			
@@ -101,19 +113,47 @@ public class WaveSpawn : MonoBehaviour
 
 	void CalculateEnemies()
 	{
-		enemyCount = (20 + (10 * waveNumb)) + Random.Range (-9, 9); //Change first ten back to twenty
+		enemyCount = (10 + (10 * waveNumb)) + Random.Range (-9, 9); //Change first ten back to twenty
 	}
 
 	void PrepareNextWave()
 	{
 		if (enemyCount <= 0) 
 		{
-			shouldSpawn = true;
-			waveNumb++;
-			enemiesSpawned = 0;
-			PrepareWaveRunning = false;
-			StartCoroutine (SpawnWaves ());
+			
+			if (startNextRunning == false)
+			{
+				WCT.text = "WAVE COMPLETED";
+				startNextRunning = true;
+				StartCoroutine (StartNext ());
+			}
+
 		}
 	}
 
+	IEnumerator StartNext()
+	{	
+		while (waveCoolDownTimer  >= 0) 
+		{
+			if (waveCoolDownTimer <= 5)
+			{
+				WCT.text = "Next Wave is Starting";
+			}
+			
+			waveCoolText.text = "Wave Cooldown: " + waveCoolDownTimer.ToString() + " seconds";
+			yield return new WaitForSeconds (1f);
+			waveCoolDownTimer--;
+		}
+
+		waveCoolText.text = "Wave Cooldown: -" ;
+		WCT.text = "";
+		shouldSpawn = true;
+		waveNumb++;
+		enemiesSpawned = 0;
+		PrepareWaveRunning = false;
+
+		StartCoroutine (SpawnWaves ());
+		StopCoroutine (StartNext ());
+
+	}
 }
