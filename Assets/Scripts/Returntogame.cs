@@ -1,10 +1,18 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Returntogame : MonoBehaviour {
-
-	public void SetTime(int time)
+	
+	public void UnPause(bool pause)
 	{
-		Time.timeScale = time;
+		if (pause == true) 
+		{
+			Cursor.visible = !Cursor.visible;
+			Time.timeScale = 1f - Time.timeScale;
+			pause = false;
+		}
+
 	}
+
 }

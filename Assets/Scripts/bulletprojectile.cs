@@ -29,9 +29,7 @@ public class bulletprojectile : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
-			GameCanvas.GetComponent<Canvas> ().enabled = false;
-			PauseCanvas.GetComponent<Canvas> ().enabled = true;
-
+			PauseGame ();
 
 		}
 		if (Input.GetKeyDown(KeyCode.C))
@@ -92,6 +90,15 @@ public class bulletprojectile : MonoBehaviour
 	void Fire ()
 	{
 		canFire = true;
+	}
+
+	public void PauseGame()
+	{
+		GameCanvas.GetComponent<Canvas> ().enabled = !GameCanvas.GetComponent<Canvas> ().enabled;
+		PauseCanvas.GetComponent<Canvas> ().enabled = !PauseCanvas.GetComponent<Canvas> ().enabled;
+		Cursor.visible = !Cursor.visible;
+		Time.timeScale = 1f - Time.timeScale;
+
 	}
 
 }

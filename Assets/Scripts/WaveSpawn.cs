@@ -113,7 +113,7 @@ public class WaveSpawn : MonoBehaviour
 
 	void CalculateEnemies()
 	{
-		enemyCount = (10 + (10 * waveNumb)) + Random.Range (-9, 9); //Change first ten back to twenty
+		enemyCount = (20 + (10 * waveNumb)) + Random.Range (-9, 9); //Change first ten back to twenty
 	}
 
 	void PrepareNextWave()
