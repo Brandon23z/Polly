@@ -7,6 +7,7 @@ public class bulletprojectile : MonoBehaviour
 	
 	public Canvas GameCanvas;
 	public Canvas PauseCanvas;
+	public Canvas ScoreCanvas;
 	public Rigidbody projectile;
 	public GameObject muzzleFlash;
 	public Transform muzzleSpawn;
@@ -14,6 +15,7 @@ public class bulletprojectile : MonoBehaviour
 	public AudioClip gunShot;
 	public float bulletSpeed = 70;
 	public int ammoCount;
+
 	public int maxAmmo = 15;
 	public float bulletDelay = 0.650F;
 	public bool isFullyAutomatic = false;
@@ -27,6 +29,10 @@ public class bulletprojectile : MonoBehaviour
 
 	void Update ()
 	{
+		if (Input.GetButtonDown("Scoreboard")) 
+		{
+			ScoreCanvas.GetComponent<Canvas>().enabled = !ScoreCanvas.GetComponent<Canvas>().enabled;
+		}
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
 			PauseGame ();
@@ -100,5 +106,7 @@ public class bulletprojectile : MonoBehaviour
 		Time.timeScale = 1f - Time.timeScale;
 
 	}
+
+
 
 }

@@ -1,15 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\HealthPickup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\bulletprojectile.cs">
     <Files>
-      <File FileName="Assets\Scripts\bulletprojectile.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\BulletHit.cs" Line="36" Column="48" />
+      <File FileName="Assets\Scripts\bulletprojectile.cs" Line="18" Column="2" />
+      <File FileName="Assets\Scripts\BulletHit.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\UIAmmo.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\HealthBar.cs" Line="45" Column="3" />
+      <File FileName="Assets\Scripts\HealthBar.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\EnemyDamage.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\SceneLoad.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\WaveSpawn.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\AmmoPickup.cs" Line="24" Column="9" />
+      <File FileName="Assets\Scripts\AmmoPickup.cs" Line="1" Column="1" />
       <File FileName="Assets\HealthPickup.cs" Line="18" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>

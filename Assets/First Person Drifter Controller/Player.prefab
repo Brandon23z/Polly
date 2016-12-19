@@ -893,6 +893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameCanvas: {fileID: 0}
   PauseCanvas: {fileID: 0}
+  ScoreCanvas: {fileID: 0}
   projectile: {fileID: 54000012448638176, guid: 8905e691318e3824ea78277469430fe8,
     type: 2}
   muzzleFlash: {fileID: 0}
