@@ -17,7 +17,7 @@ public class AmmoPickup : MonoBehaviour
 	{
 		if(other.tag == "Player")
 		{
-			if (bullP.ammoCount > 10) 
+			if (bullP.ammoCount > 5) 
 			{
 				bullP.ammoCount = bullP.maxAmmo;
 			}

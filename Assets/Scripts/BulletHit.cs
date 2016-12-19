@@ -5,6 +5,7 @@ public class BulletHit : MonoBehaviour
 {
 	public Transform bloodParticle;
 	public GameObject ammoModel;
+	public GameObject healthModel;
 	public float randomVal;
 	public WaveSpawn WaveSpawner;
 
@@ -12,6 +13,7 @@ public class BulletHit : MonoBehaviour
 	void Start()
 	{
 		ammoModel = GameObject.FindGameObjectWithTag ("Ammo");
+		healthModel = GameObject.FindGameObjectWithTag ("HealthPack");
 		WaveSpawner = GameObject.FindGameObjectWithTag ("WaveSpawnerScript").GetComponent<WaveSpawn>();
 	}
 
@@ -31,9 +33,18 @@ public class BulletHit : MonoBehaviour
 
 			randomVal = Random.value;
 
-			if (randomVal <= .05f) 
+			if (randomVal <= .05f) //Drop Health or Ammo
 			{
-				Instantiate(ammoModel, pos, ammoModel.transform.rotation);
+				int temp = Random.Range (1, 10);
+
+				if (temp % 2 == 0) 
+				{
+					Instantiate (ammoModel, pos, ammoModel.transform.rotation);
+				} 
+				else 
+				{ 
+					Instantiate (healthModel, pos, healthModel.transform.rotation);
+				}
 			}
 			WaveSpawner.enemyCount--;
 			DestroyObject (other.gameObject);

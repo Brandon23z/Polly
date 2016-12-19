@@ -31,25 +31,32 @@ public class HealthBar : MonoBehaviour {
 	
 	public Image CurrentHealthBar;
 	
-	public float currentHealth = 100;
-	private float maxHealth = 100;
 	public float currWidth = 300;
 	public float maxWidth = 300;
 	public float currHeight;
 
-	private void Start()
+	void Start()
 	{
-		UpdateHealthBar();
 		currHeight = 25;
+		CurrentHealthBar.rectTransform.sizeDelta = new Vector2(currWidth ,currHeight);
 	}
 
 	public void UpdateHealthBar()
 	{
-		float ratio = currentHealth/maxHealth;
-		CurrentHealthBar.rectTransform.sizeDelta = new Vector2((currWidth - (maxWidth/10)) ,currHeight);
+		currWidth -= (maxWidth / 10);
+		CurrentHealthBar.rectTransform.sizeDelta = new Vector2(currWidth ,currHeight);
+	}
+
+	public void AddHealth()
+	{
+		if (currWidth < maxWidth) 
+		{
+			currWidth += (maxWidth / 10);
+			CurrentHealthBar.rectTransform.sizeDelta = new Vector2 (currWidth, currHeight);
+		}
 	}
 	
-	private void TakeDamage(float damage)
+	/*private void TakeDamage(float damage)
 	{
 		currentHealth -= damage;
 		if(currentHealth < 0)
@@ -61,5 +68,15 @@ public class HealthBar : MonoBehaviour {
 			currentHealth = maxHealth;
 		}
 		UpdateHealthBar();
+	}*/
+
+
+	void OnCollisionEnter(Collision other)
+	{
+		if (other.gameObject.tag == "Enemy") 
+		{
+			UpdateHealthBar ();
+		}
+
 	}
 }

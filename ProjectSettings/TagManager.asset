@@ -13,6 +13,7 @@ TagManager:
   - Ammo
   - WaveSpawnerScript
   - CurrentHealth
+  - HealthPack
   layers:
   - Default
   - TransparentFX
