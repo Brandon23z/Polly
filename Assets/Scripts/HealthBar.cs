@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class HealthBar : MonoBehaviour {
@@ -28,23 +29,37 @@ public class HealthBar : MonoBehaviour {
 			currHealth = currHealth - hitValue;
 		}
 	}*/
-	
+
 	public Image CurrentHealthBar;
-	
+	public Canvas GameOverScreen;
 	public float currWidth = 300;
 	public float maxWidth = 300;
 	public float currHeight;
+	public int mainMenu;
+	private int RestartIn;
 
 	void Start()
 	{
 		currHeight = 25;
+		mainMenu = 1;
 		CurrentHealthBar.rectTransform.sizeDelta = new Vector2(currWidth ,currHeight);
+		RestartIn = 7;
 	}
 
 	public void UpdateHealthBar()
 	{
-		currWidth -= (maxWidth / 10);
-		CurrentHealthBar.rectTransform.sizeDelta = new Vector2(currWidth ,currHeight);
+		if (currWidth > 0) 
+		{
+			currWidth -= (maxWidth / 10);
+			CurrentHealthBar.rectTransform.sizeDelta = new Vector2 (currWidth, currHeight);
+
+		}
+
+		if (currWidth <= 0) 
+		{
+			StartCoroutine(GameOver (mainMenu));
+
+		}
 	}
 
 	public void AddHealth()
@@ -55,7 +70,7 @@ public class HealthBar : MonoBehaviour {
 			CurrentHealthBar.rectTransform.sizeDelta = new Vector2 (currWidth, currHeight);
 		}
 	}
-	
+
 	/*private void TakeDamage(float damage)
 	{
 		currentHealth -= damage;
@@ -78,5 +93,14 @@ public class HealthBar : MonoBehaviour {
 			UpdateHealthBar ();
 		}
 
+	}
+
+	IEnumerator GameOver(int sceneDex)
+	{
+		Time.timeScale = 1f - Time.timeScale;
+		GameOverScreen.GetComponent<Canvas> ().enabled = true;
+		yield return new WaitForSeconds (RestartIn);
+		Time.timeScale = 1f - Time.timeScale;
+		SceneManager.LoadScene (sceneDex);
 	}
 }

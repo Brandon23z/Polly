@@ -29,6 +29,10 @@ public class bulletprojectile : MonoBehaviour
 
 	void Update ()
 	{
+		if (PauseCanvas.GetComponent<Canvas> ().enabled == true && Input.GetKeyDown (KeyCode.Return))
+		{
+			Application.Quit ();
+		}
 		if (Input.GetButtonDown("Scoreboard")) 
 		{
 			ScoreCanvas.GetComponent<Canvas>().enabled = !ScoreCanvas.GetComponent<Canvas>().enabled;
@@ -104,6 +108,8 @@ public class bulletprojectile : MonoBehaviour
 		PauseCanvas.GetComponent<Canvas> ().enabled = !PauseCanvas.GetComponent<Canvas> ().enabled;
 		Cursor.visible = !Cursor.visible;
 		Time.timeScale = 1f - Time.timeScale;
+
+	
 
 	}
 

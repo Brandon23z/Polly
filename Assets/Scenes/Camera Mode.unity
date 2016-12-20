@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44756883, g: 0.4975162, b: 0.5754481, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -9673,6 +9673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameCanvas: {fileID: 0}
   PauseCanvas: {fileID: 0}
+  ScoreCanvas: {fileID: 0}
   projectile: {fileID: 387355305}
   muzzleFlash: {fileID: 0}
   muzzleSpawn: {fileID: 0}
@@ -10506,6 +10507,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012250919770, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013958669044, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
