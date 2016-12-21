@@ -3999,7 +3999,7 @@ GameObject:
   - 114: {fileID: 474094461}
   m_Layer: 5
   m_Name: Score
-  m_TagString: Untagged
+  m_TagString: ScoreText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4019,7 +4019,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 295, y: -111}
+  m_AnchoredPosition: {x: 149, y: -111}
   m_SizeDelta: {x: 233.8, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &474094461
@@ -4054,7 +4054,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score:'
+  m_Text: 'Score: 0'
 --- !u!222 &474094462
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6204,7 +6204,7 @@ GameObject:
   - 114: {fileID: 785204947}
   m_Layer: 5
   m_Name: Kills
-  m_TagString: Untagged
+  m_TagString: KillText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6224,7 +6224,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182, y: -111}
+  m_AnchoredPosition: {x: -89, y: -111}
   m_SizeDelta: {x: 238.9, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &785204947
@@ -6259,7 +6259,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Kills: '
+  m_Text: 'Kills: 0'
 --- !u!222 &785204948
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8195,7 +8195,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 384, y: 182}
+  m_AnchoredPosition: {x: 384, y: 186}
   m_SizeDelta: {x: 141.45, y: 91.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1053429800
@@ -9193,7 +9193,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013711703442, guid: 46d0449d719a8d8409cdf11e8a6e14c6, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4000013658549862, guid: 46d0449d719a8d8409cdf11e8a6e14c6, type: 2}
       propertyPath: m_RootOrder
@@ -9201,7 +9201,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011070416938, guid: 46d0449d719a8d8409cdf11e8a6e14c6, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46d0449d719a8d8409cdf11e8a6e14c6, type: 2}
@@ -11934,11 +11934,11 @@ GameObject:
   - 114: {fileID: 1449495577}
   m_Layer: 5
   m_Name: Accuracy
-  m_TagString: Untagged
+  m_TagString: AccuracyText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1449495576
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14453,19 +14453,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012544813372, guid: b3ed892fdab32e14fb00fd515a9812fe, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.067117244
+      value: 0.06711725
       objectReference: {fileID: 0}
     - target: {fileID: 4000012544813372, guid: b3ed892fdab32e14fb00fd515a9812fe, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.88237053
+      value: -0.88237065
       objectReference: {fileID: 0}
     - target: {fileID: 4000012544813372, guid: b3ed892fdab32e14fb00fd515a9812fe, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.13329574
+      value: 0.13329576
       objectReference: {fileID: 0}
     - target: {fileID: 4000012544813372, guid: b3ed892fdab32e14fb00fd515a9812fe, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.44626182
+      value: -0.44626188
       objectReference: {fileID: 0}
     - target: {fileID: 4000012544813372, guid: b3ed892fdab32e14fb00fd515a9812fe, type: 2}
       propertyPath: m_RootOrder
@@ -19409,7 +19409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy:
   - {fileID: 1000010202728918, guid: 5a64f7cfae1a5e6469af9a9e237ded5b, type: 2}
-  - {fileID: 1000013731021440, guid: ee0c3b60f86836a4fb2b975714f30fd1, type: 2}
+  - {fileID: 1000012512544404, guid: 67d58f2bbb0367f408248925c4ac7dfb, type: 2}
   hazardCount: 3
   spawnWait: 0.5
   startWait: 1
@@ -19420,7 +19420,7 @@ MonoBehaviour:
   enemiesSpawned: 0
   shouldSpawn: 0
   waveNumb: 0
-  cooldown: 20
+  cooldown: 2
   waveCoolDown: 15
   spawnPoints:
   - {fileID: 970090056}
@@ -19431,6 +19431,10 @@ MonoBehaviour:
   WaveCoolDownText: {fileID: 458800071}
   PrepareWaveRunning: 0
   startNextRunning: 0
+  kills: 0
+  Score: 0
+  BlockVal: 75
+  TrapVal: 34
 --- !u!4 &2113628327
 Transform:
   m_ObjectHideFlags: 0

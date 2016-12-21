@@ -30,6 +30,11 @@ public class WaveSpawn : MonoBehaviour
 	private Text waveCoolText;
 	public bool PrepareWaveRunning;
 	public bool startNextRunning;
+	public int kills;
+	public int Score;
+	public int BlockVal;
+	public int TrapVal;
+
 
 	void Start()
 	{
@@ -50,7 +55,7 @@ public class WaveSpawn : MonoBehaviour
 			warmup ();
 		} 
 			
-		WNT.text = "Wave " + waveNumb + "/" + maxWaves;
+		WNT.text = "Wave " + waveNumb;
 		GLT.text = "Gons Left: " + enemyCount;
 
 		if (PrepareWaveRunning == true) 
