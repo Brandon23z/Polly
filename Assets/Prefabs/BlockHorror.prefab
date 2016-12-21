@@ -209,6 +209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  moveSpeed: 5
+  moveSpeed: 10
   rotationSpeed: 10
   myTransform: {fileID: 0}

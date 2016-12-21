@@ -19712,7 +19712,7 @@ MonoBehaviour:
   - {fileID: 1000012512544404, guid: 67d58f2bbb0367f408248925c4ac7dfb, type: 2}
   - {fileID: 1000012512544404, guid: 67d58f2bbb0367f408248925c4ac7dfb, type: 2}
   - {fileID: 1000012512544404, guid: 67d58f2bbb0367f408248925c4ac7dfb, type: 2}
-  hazardCount: 3
+  hazardCount: 6
   spawnWait: 0.5
   startWait: 1
   waveWait: 4
