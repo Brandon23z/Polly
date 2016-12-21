@@ -26,7 +26,8 @@ public class EnemyAI : MonoBehaviour
     {
         //rotate to look at the player
         myTransform.rotation = Quaternion.Slerp(myTransform.rotation,
-        Quaternion.LookRotation(target.position - myTransform.position), rotationSpeed * Time.deltaTime);
+        	Quaternion.LookRotation(target.position - myTransform.position), 
+			rotationSpeed * Time.deltaTime);
 
 
         //move towards the player

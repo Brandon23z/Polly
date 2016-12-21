@@ -97,10 +97,10 @@ public class HealthBar : MonoBehaviour {
 
 	IEnumerator GameOver(int sceneDex)
 	{
-		Time.timeScale = 1f - Time.timeScale;
+		//Time.timeScale = 1f - Time.timeScale;
 		GameOverScreen.GetComponent<Canvas> ().enabled = true;
 		yield return new WaitForSeconds (RestartIn);
-		Time.timeScale = 1f - Time.timeScale;
+		//Time.timeScale = 1f - Time.timeScale;
 		SceneManager.LoadScene (sceneDex);
 	}
 }
