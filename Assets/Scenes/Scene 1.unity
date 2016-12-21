@@ -3652,6 +3652,42 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0557dcdc9696ad94bbbcf13ab53e53b6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &440363776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 440363777}
+  - 33: {fileID: 440363778}
+  m_Layer: 0
+  m_Name: EnemySpawnCube ship
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &440363777
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 440363776}
+  m_LocalRotation: {x: -0.009498531, y: -0.45163065, z: 0.0048084604, w: 0.89214146}
+  m_LocalPosition: {x: -72.8, y: 18.3, z: 174}
+  m_LocalScale: {x: 0.5488258, y: 0.46735233, z: 0.5119545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1666968199}
+  m_RootOrder: 3
+--- !u!33 &440363778
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 440363776}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &449271728
 Prefab:
   m_ObjectHideFlags: 0
@@ -4288,6 +4324,36 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 505481273}
+--- !u!1 &512128010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000010319593660, guid: 46d0449d719a8d8409cdf11e8a6e14c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 512128011}
+  m_Layer: 0
+  m_Name: Lamp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &512128011
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000011070416938, guid: 46d0449d719a8d8409cdf11e8a6e14c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 512128010}
+  m_LocalRotation: {x: 0.16907571, y: -0.75588036, z: 0.27217132, w: 0.57094747}
+  m_LocalPosition: {x: -4.0762453, y: 5.903862, z: -1.005454}
+  m_LocalScale: {x: 100.00001, y: 100, z: 100}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1666968199}
+  m_RootOrder: 1
 --- !u!1001 &513949235
 Prefab:
   m_ObjectHideFlags: 0
@@ -4583,6 +4649,42 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 0}
+--- !u!1 &536127030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 536127031}
+  - 33: {fileID: 536127032}
+  m_Layer: 0
+  m_Name: EnemySpawnCube left eye
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &536127031
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 536127030}
+  m_LocalRotation: {x: -0.16305889, y: 0.65712655, z: -0.16522624, w: 0.71714497}
+  m_LocalPosition: {x: -0.0163, y: 0.0366, z: 0.0049}
+  m_LocalScale: {x: 0.0031520955, y: 0.0031964264, z: 0.002964786}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1614143272}
+  m_RootOrder: 4
+--- !u!33 &536127032
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 536127030}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &546721127
 Prefab:
   m_ObjectHideFlags: 0
@@ -4800,6 +4902,90 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &573940358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000013167009102, guid: 46d0449d719a8d8409cdf11e8a6e14c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 573940359}
+  - 33: {fileID: 573940362}
+  - 23: {fileID: 573940361}
+  - 135: {fileID: 573940360}
+  m_Layer: 0
+  m_Name: Icosphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &573940359
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000013658549862, guid: 46d0449d719a8d8409cdf11e8a6e14c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 573940358}
+  m_LocalRotation: {x: -0.5951926, y: -0.38176677, z: -0.38176674, w: 0.5951925}
+  m_LocalPosition: {x: 17.06, y: -0.17, z: -22.5}
+  m_LocalScale: {x: 499.67636, y: 777.61755, z: 844.077}
+  m_LocalEulerAnglesHint: {x: -89.981, y: 0, z: -65.534004}
+  m_Children: []
+  m_Father: {fileID: 1666968199}
+  m_RootOrder: 0
+--- !u!135 &573940360
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 135000013881362384, guid: 46d0449d719a8d8409cdf11e8a6e14c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 573940358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.007
+  m_Center: {x: 0.002297628, y: -4.427018e-12, z: 0.004753474}
+--- !u!23 &573940361
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 23000011935722222, guid: 46d0449d719a8d8409cdf11e8a6e14c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 573940358}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 2100000, guid: aba3316ecb504b34f8b7440bebb6cef4, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &573940362
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 33000010931297068, guid: 46d0449d719a8d8409cdf11e8a6e14c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 573940358}
+  m_Mesh: {fileID: 4300000, guid: 2efd8e1a2bafd7d438accea12b359131, type: 3}
 --- !u!1001 &581255169
 Prefab:
   m_ObjectHideFlags: 0
@@ -8318,6 +8504,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7c544c3a7687d7541b1a219d7f545d7f, type: 2}
+    - target: {fileID: 100002, guid: 6e65c6002f08cc045bbc6c86ded80f95, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6400002, guid: 6e65c6002f08cc045bbc6c86ded80f95, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 6e65c6002f08cc045bbc6c86ded80f95, type: 3}
@@ -14289,6 +14479,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c31ba3c985ea9f4192a125c3b9d71c7, type: 3}
   m_IsPrefabParent: 0
+--- !u!4 &1614143272 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400006, guid: 2c31ba3c985ea9f4192a125c3b9d71c7, type: 3}
+  m_PrefabInternal: {fileID: 1614143271}
 --- !u!1 &1639712780
 GameObject:
   m_ObjectHideFlags: 0
@@ -14513,6 +14707,40 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: d9c7ce37da5258042bfea36f3c9839bb, type: 3}
   m_PrefabInternal: {fileID: 2024600550}
+--- !u!1 &1666968198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000012177400764, guid: 46d0449d719a8d8409cdf11e8a6e14c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1666968199}
+  m_Layer: 0
+  m_Name: Enemy Spawn Rock (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1666968199
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000010576752946, guid: 46d0449d719a8d8409cdf11e8a6e14c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1666968198}
+  m_LocalRotation: {x: 0.0072339117, y: 0.11324589, z: -0.007811139, w: 0.99350995}
+  m_LocalPosition: {x: -193.8, y: -4.7, z: 269.2}
+  m_LocalScale: {x: 2.16, y: 2.14, z: 1.71}
+  m_LocalEulerAnglesHint: {x: 0.915, y: 12.704, z: -0.772}
+  m_Children:
+  - {fileID: 573940359}
+  - {fileID: 512128011}
+  - {fileID: 1808154790}
+  - {fileID: 440363777}
+  m_Father: {fileID: 0}
+  m_RootOrder: 119
 --- !u!1 &1670853085
 GameObject:
   m_ObjectHideFlags: 0
@@ -15370,6 +15598,42 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013572454910, guid: b24e3823ef2737e4e862f828a8c67af0,
     type: 2}
   m_PrefabInternal: {fileID: 2007535596}
+--- !u!1 &1808154789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1808154790}
+  - 33: {fileID: 1808154791}
+  m_Layer: 0
+  m_Name: EnemySpawnCubedunes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1808154790
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1808154789}
+  m_LocalRotation: {x: -0.009498531, y: -0.45163065, z: 0.004808461, w: 0.8921415}
+  m_LocalPosition: {x: 16.85, y: 0.83, z: -21.8}
+  m_LocalScale: {x: 0.542061, y: 0.467343, z: 0.5056441}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1666968199}
+  m_RootOrder: 2
+--- !u!33 &1808154791
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1808154789}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1817038010
 GameObject:
   m_ObjectHideFlags: 0
@@ -19081,6 +19345,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aef006030a6a354d91a03d950d8e31f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2089836767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2089836768}
+  - 33: {fileID: 2089836769}
+  m_Layer: 0
+  m_Name: EnemySpawnCube right eye
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2089836768
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2089836767}
+  m_LocalRotation: {x: -0.16305889, y: 0.6571265, z: -0.16522625, w: 0.717145}
+  m_LocalPosition: {x: 0.0103, y: 0.0329, z: 0.0092}
+  m_LocalScale: {x: 0.0031543404, y: 0.003198632, z: 0.0029648438}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1614143272}
+  m_RootOrder: 5
+--- !u!33 &2089836769
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2089836767}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2101638108
 GameObject:
   m_ObjectHideFlags: 0
@@ -19410,6 +19710,8 @@ MonoBehaviour:
   Enemy:
   - {fileID: 1000010202728918, guid: 5a64f7cfae1a5e6469af9a9e237ded5b, type: 2}
   - {fileID: 1000012512544404, guid: 67d58f2bbb0367f408248925c4ac7dfb, type: 2}
+  - {fileID: 1000012512544404, guid: 67d58f2bbb0367f408248925c4ac7dfb, type: 2}
+  - {fileID: 1000012512544404, guid: 67d58f2bbb0367f408248925c4ac7dfb, type: 2}
   hazardCount: 3
   spawnWait: 0.5
   startWait: 1
@@ -19420,11 +19722,15 @@ MonoBehaviour:
   enemiesSpawned: 0
   shouldSpawn: 0
   waveNumb: 0
-  cooldown: 2
+  cooldown: 11
   waveCoolDown: 15
   spawnPoints:
   - {fileID: 970090056}
   - {fileID: 899586025}
+  - {fileID: 1808154790}
+  - {fileID: 440363777}
+  - {fileID: 536127031}
+  - {fileID: 2089836768}
   WaveNumberText: {fileID: 170876349}
   GonsLeftText: {fileID: 1698182122}
   WaveCompletedText: {fileID: 1961836991}
