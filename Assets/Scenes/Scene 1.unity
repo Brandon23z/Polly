@@ -5902,6 +5902,7 @@ GameObject:
   - 23: {fileID: 642869078}
   - 64: {fileID: 642869077}
   - 64: {fileID: 642869076}
+  - 65: {fileID: 642869080}
   m_Layer: 0
   m_Name: RockCover (7)
   m_TagString: Untagged
@@ -5932,7 +5933,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300002, guid: 14a6b523cafd5fe41a63aac2a30e56d2, type: 3}
 --- !u!64 &642869077
 MeshCollider:
@@ -5985,6 +5986,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 642869074}
   m_Mesh: {fileID: 4300002, guid: 14a6b523cafd5fe41a63aac2a30e56d2, type: 3}
+--- !u!65 &642869080
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 642869074}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 16.265694, y: 11.239409, z: 15.151752}
+  m_Center: {x: 0.9629531, y: 5.619697, z: 0.85413057}
 --- !u!1001 &665061505
 Prefab:
   m_ObjectHideFlags: 0
@@ -9939,7 +9952,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1107940224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -39.739998, y: 0.1487, z: -0.052000046}
+  m_LocalPosition: {x: -39.739998, y: 0.175, z: -0.052000046}
   m_LocalScale: {x: 38.84474, y: 0.014252158, z: -0.51483804}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -9984,8 +9997,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.0521601, y: 26.442886, z: 3.9246156}
+  m_Center: {x: 0.026080053, y: 12.721697, z: 1.4398576}
 --- !u!33 &1107940228
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13549,6 +13562,11 @@ Prefab:
       propertyPath: GameOverScreen
       value: 
       objectReference: {fileID: 1430046872}
+    - target: {fileID: 114000012179026194, guid: 25e3ab2d6992a48f3ab7455baed062e0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25e3ab2d6992a48f3ab7455baed062e0, type: 2}
   m_IsPrefabParent: 0
