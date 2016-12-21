@@ -47,11 +47,10 @@ UI:
 
 Known Bugs:
 	
-	Gun Clips through walls
-	Blocks Hitbox
-	Blocks get stuck in the tree
-	Can sometimes shoot while game is paused
-	Block enemies can get stuck in some other objects 
-	Game does not restart on Game over (Rare)
+	-Gun Clips through walls
+	-Blocks Hitbox
+	-Blocks get stuck in the tree
+	-Can sometimes shoot while game is paused 
+	-Block enemies sometimes clip through an invisble wall, making them 		  impossible to hit.	
 	
 	
