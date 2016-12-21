@@ -43,7 +43,13 @@ public class HealthBar : MonoBehaviour {
 	{
 		if (currWidth < maxWidth) 
 		{
-			currWidth += ((maxWidth / 10)*2);
+			currWidth += ((maxWidth / 10)*2); //adding 2 healthboxes
+
+			if (currWidth > maxWidth) //have curr health be max health
+			{
+				currWidth = maxWidth;
+			}
+
 			CurrentHealthBar.rectTransform.sizeDelta = new Vector2 (currWidth, currHeight); //update the health bar
 		}
 	}
