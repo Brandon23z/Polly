@@ -3,7 +3,8 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Returntogame : MonoBehaviour {
-	
+
+	//SCRIPT NO LONGER USED
 	public void UnPause(bool pause)
 	{
 		if (pause == true) 

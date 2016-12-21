@@ -11,13 +11,13 @@ public class UIAmmo : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		bullP = pistol.GetComponent<bulletprojectile> ();
+		bullP = pistol.GetComponent<bulletprojectile> (); //gets the bulletprojectile component from the pistol
 		ammoCount = this.GetComponent<Text> ();
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		ammoCount.text = bullP.ammoCount.ToString();
+		ammoCount.text = bullP.ammoCount.ToString(); //update the ammo count text
 	}
 }

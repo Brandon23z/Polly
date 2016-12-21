@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class CharcaterMove : MonoBehaviour {
+	
 	public float speed = 6.0F;
 	public float jumpSpeed = 12.0F;
 	public float gravity = 20.0F;
@@ -11,12 +12,12 @@ public class CharcaterMove : MonoBehaviour {
 	void Update() {
 		CharacterController controller = GetComponent<CharacterController>();
 
-		if (controller.isGrounded)
+		if (controller.isGrounded) //is the player on the ground
 		{	
 			moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 			moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection = moveDirection * speed;
-			if(Input.GetButton("Jump"))
+			if(Input.GetButton("Jump")) //jumping
 			{
 				moveDirection.y = jumpSpeed;
 			}

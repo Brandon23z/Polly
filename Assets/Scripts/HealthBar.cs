@@ -5,31 +5,6 @@ using System.Collections;
 
 public class HealthBar : MonoBehaviour {
 
-	/*RectTransform healthbar;
-	public Canvas Health;
-	public float hitValue = .2f;
-	public float defaultHeight = .25f;
-	public float defaultWidth = 2f;
-	public float currHealth;
-	// Use this for initialization
-	void Start ()
-	{
-		healthbar = Health.GetComponentInChildren<RectTransform> ();
-
-		currHealth = 2f;
-	}
-
-
-
-	void OnTriggerEnter (Collider other) 
-	{
-		if (other.gameObject.tag == "Enemy")
-		{
-			healthbar.sizeDelta = new Vector2 ((currHealth-hitValue), defaultHeight);
-			currHealth = currHealth - hitValue;
-		}
-	}*/
-
 	public Image CurrentHealthBar;
 	public Canvas GameOverScreen;
 	public float currWidth = 300;
@@ -38,6 +13,7 @@ public class HealthBar : MonoBehaviour {
 	public int mainMenu;
 	private int RestartIn;
 
+	//starting values
 	void Start()
 	{
 		currHeight = 25;
@@ -48,59 +24,47 @@ public class HealthBar : MonoBehaviour {
 
 	public void UpdateHealthBar()
 	{
-		if (currWidth > 0) 
+		if (currWidth > 0) //if the players health is greater than 0
 		{
 			currWidth -= (maxWidth / 10);
 			CurrentHealthBar.rectTransform.sizeDelta = new Vector2 (currWidth, currHeight);
 
 		}
 
-		if (currWidth <= 0) 
+		if (currWidth <= 0) // if the players health is less than or equal to 0
 		{
-			StartCoroutine(GameOver (mainMenu));
+			StartCoroutine(GameOver (mainMenu)); //Start the Game over function
 
 		}
 	}
 
+	//picking up a healthpack
 	public void AddHealth()
 	{
 		if (currWidth < maxWidth) 
 		{
-			currWidth += (maxWidth / 10);
-			CurrentHealthBar.rectTransform.sizeDelta = new Vector2 (currWidth, currHeight);
+			currWidth += ((maxWidth / 10)*2);
+			CurrentHealthBar.rectTransform.sizeDelta = new Vector2 (currWidth, currHeight); //update the health bar
 		}
 	}
 
-	/*private void TakeDamage(float damage)
-	{
-		currentHealth -= damage;
-		if(currentHealth < 0)
-		{
-			currentHealth = 0;
-		}
-		if(currentHealth > maxHealth)
-		{
-			currentHealth = maxHealth;
-		}
-		UpdateHealthBar();
-	}*/
-
-
+	//Collision with the enemuy
 	void OnCollisionEnter(Collision other)
 	{
 		if (other.gameObject.tag == "Enemy") 
 		{
-			UpdateHealthBar ();
+			UpdateHealthBar (); //update the healthbar
 		}
 
 	}
 
+	//Coroutine for the game over
 	IEnumerator GameOver(int sceneDex)
 	{
 		//Time.timeScale = 1f - Time.timeScale;
-		GameOverScreen.GetComponent<Canvas> ().enabled = true;
-		yield return new WaitForSeconds (RestartIn);
+		GameOverScreen.GetComponent<Canvas> ().enabled = true; //display the game over screen
+		yield return new WaitForSeconds (RestartIn); //wait a few seconds
 		//Time.timeScale = 1f - Time.timeScale;
-		SceneManager.LoadScene (sceneDex);
+		SceneManager.LoadScene (sceneDex); //reload the scene
 	}
 }

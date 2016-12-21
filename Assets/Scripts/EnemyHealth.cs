@@ -3,6 +3,7 @@ using System.Collections;
 
 public class EnemyHealth : MonoBehaviour
 {
+	//SCRIPT IS NOT USED
     public int startingHealth = 10;      
     public int currentHealth;                 
     public float sinkSpeed = 2.5f;            

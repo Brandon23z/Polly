@@ -13,21 +13,22 @@ public class AmmoPickup : MonoBehaviour
 
 	}
 
+	//if a ammo pack is picked up
 	private void OnTriggerEnter(Collider other)
 	{
 		if(other.tag == "Player")
 		{
 			if (bullP.ammoCount > 5) 
 			{
-				bullP.ammoCount = bullP.maxAmmo;
+				bullP.ammoCount = bullP.maxAmmo; //give the max ammo
 			}
 			else 
 			{
-				bullP.ammoCount += ammoVal;
+				bullP.ammoCount += ammoVal;  //add the current value of the ammo pack
 
 			}
 
-			Destroy (this.gameObject);
+			Destroy (this.gameObject); //destroy the ammo pack
 		}
 	}
 }

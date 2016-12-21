@@ -51,5 +51,7 @@ Known Bugs:
 	Blocks Hitbox
 	Blocks get stuck in the tree
 	Can sometimes shoot while game is paused
+	Block enemies can get stuck in some other objects 
+	Game does not restart on Game over (Rare)
 	
 	
