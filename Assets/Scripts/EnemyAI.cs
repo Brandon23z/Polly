@@ -18,7 +18,7 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
-        target = GameObject.FindWithTag("Weapon").transform; //find the players gameobject
+        target = GameObject.FindWithTag("Player").transform; //find the players gameobject
     }
 
 
